@@ -11,7 +11,7 @@ public class updateseat {
     }
 
     public void setNumber(Integer number) {
-        ,this.number = number;
+        this.number = number;
     }
 
     public String getName() {
