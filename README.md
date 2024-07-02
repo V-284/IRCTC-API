@@ -14,3 +14,16 @@ Requirements :- Postman, IntelliJ, MySQL Workbench
 8)Start Tomcat Server From IntelliJ
 9)run localhost:8080
 10)Enjoy
+
+1) To register user
+hit url localhost:8080/register with POST Action
+Body raw(JSON)
+
+{
+"username": "<anyname>",
+"passwrod":"<anypassword",
+}
+click on Send
+
+
+
