@@ -73,7 +73,7 @@ public class api {
         }
 
         String k = jwtbuilder.generateToken(temp.getUsername());
-        return ResponseEntity.ok("success + " + k);
+        return ResponseEntity.ok("success + Your Authorization Code Is " + k);
         // else return
 
     }
