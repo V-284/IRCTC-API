@@ -25,5 +25,18 @@ Body raw(JSON)
 }
 click on Send
 
+2) To login
+hit url localhost:8080/login
+
+{
+"username" :"<>",
+"password" :"<>",
+}
+
+you will get Authorization Code here which you need to add in Bearer Token to access any api without authentication
+
+to access admin apis, visit application.properties and fetch myapi-key and myapi-secret
+
+
 
 
