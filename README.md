@@ -35,7 +35,8 @@ hit url localhost:8080/login
 
 you will get Authorization Code here which you need to add in Bearer Token to access any api without authentication
 
-to access admin apis, visit application.properties and fetch myapi-key and myapi-secret
+3)
+To access admin apis, visit application.properties and fetch myapi-key and myapi-secret and add it to header 
 
 
 
