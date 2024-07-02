@@ -38,6 +38,18 @@ you will get Authorization Code here which you need to add in Bearer Token to ac
 3)
 To access admin apis, visit application.properties and fetch myapi-key and myapi-secret and add it to header 
 
+4) to add trains add in given format JSON in Postman while hitting localhost:8080/addtrain 
+
+{ "name": "shivganga",
+"trainnumber": 12560,
+"source": "varanasi",
+"destination":"newdelhi",
+"midstation":["prayagraj","kanpur"]
+}
 
 
+
+NOTE :- All APIs are working 100%
+if you need any help, 
+reach 1vishnuverma1@gmail.com
 
