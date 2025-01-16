@@ -49,6 +49,7 @@ public class Service {
     @Transactional
    @Lock(LockModeType.PESSIMISTIC_WRITE)
     public String Bookseat(bookseat bookseat) {
+        int left=0;
         int flag = 0;
         api.endpoint.Model.Train b =train.findByTrainnameAndTrainnumber(bookseat.getName(), bookseat.getNumber());
         if (b == null)
@@ -60,6 +61,7 @@ public class Service {
             api.endpoint.Model.Bookings bookings = new api.endpoint.Model.Bookings();
             Users a = UserDB.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
             if (bookseat.getSeats() > b.getSeats()) {
+                left=b.getSeats();
                 bookings.setSeatsbooked(b.getSeats());
                 b.setSeats(0);
                 flag = 1;
@@ -74,7 +76,7 @@ public class Service {
             train.save(b);
             this.bookings.save(bookings);
             if (flag == 1)
-                return "3" + b.getSeats().toString();
+                return "3" + left;
             return "4";
         }
 
